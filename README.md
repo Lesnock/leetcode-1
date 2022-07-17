@@ -1,5 +1,5 @@
 # leetcode-1
-Solution for leetcode #1 challange
+Solution for leetcode #1 challenge (in Typescript)
 
 Link to problem: https://leetcode.com/problems/two-sum
 
