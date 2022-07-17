@@ -1,5 +1,5 @@
 import { assertEquals } from "https://deno.land/std@0.148.0/testing/asserts.ts";
-import { twoSum } from './solution.js'
+import { twoSum } from './solution.ts'
 
 Deno.test('Test leetcode #1 challenge examples are working', () => {
 	assertEquals(

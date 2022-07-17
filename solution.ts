@@ -4,18 +4,19 @@
  *	return indices of the two numbers such that they add up to target.
  *  You may assume that each input would have exactly one solution, 
  *  and you may not use the same element twice.
- *
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
  * */
-export function twoSum(nums, target) {
+export function twoSum(nums: number[], target: number) {
 	for (const [index, num] of nums.entries()) {
 		const pair = target - num
-		const pairIndex = nums.findIndex((_num, i) => i != index && _num == pair)
+		const pairIndex = nums.findIndex(finder(index, pair))
 		if (pairIndex > -1) {
 			return [index, pairIndex]
 		}
 	}
 }
 
+function finder(currentIndex: number, pairSearch: number) {
+	return function finder(num: number, index: number) {
+		return index != currentIndex && num == pairSearch
+	}
+}
